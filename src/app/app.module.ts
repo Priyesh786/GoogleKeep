@@ -17,6 +17,7 @@ import {NgFor} from '@angular/common';
 import { MatCard, MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatIcon } from '@angular/material/icon';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -24,6 +25,7 @@ import { MatIcon } from '@angular/material/icon';
   declarations: [
     AppComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
