@@ -19,6 +19,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatIcon } from '@angular/material/icon';
 import { RegisterComponent } from './register/register.component';
 import { BasicInfoComponent } from './basic-info/basic-info.component';
+import { PasswordComponent } from './password/password.component';
 
 
 
@@ -28,6 +29,7 @@ import { BasicInfoComponent } from './basic-info/basic-info.component';
     LoginComponent,
     RegisterComponent,
     BasicInfoComponent,
+    PasswordComponent,
   ],
   imports: [
     BrowserModule,
