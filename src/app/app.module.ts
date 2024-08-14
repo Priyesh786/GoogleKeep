@@ -20,6 +20,7 @@ import { MatIcon } from '@angular/material/icon';
 import { RegisterComponent } from './register/register.component';
 import { BasicInfoComponent } from './basic-info/basic-info.component';
 import { PasswordComponent } from './password/password.component';
+import { UsernameComponent } from './username/username.component';
 
 
 
@@ -30,6 +31,7 @@ import { PasswordComponent } from './password/password.component';
     RegisterComponent,
     BasicInfoComponent,
     PasswordComponent,
+    UsernameComponent,
   ],
   imports: [
     BrowserModule,
