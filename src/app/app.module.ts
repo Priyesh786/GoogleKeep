@@ -18,6 +18,7 @@ import { MatCard, MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatIcon } from '@angular/material/icon';
 import { RegisterComponent } from './register/register.component';
+import { BasicInfoComponent } from './basic-info/basic-info.component';
 
 
 
@@ -26,6 +27,7 @@ import { RegisterComponent } from './register/register.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    BasicInfoComponent,
   ],
   imports: [
     BrowserModule,
