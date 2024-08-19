@@ -28,7 +28,15 @@
                         <div>
                             <mat-form-field appearance="outline" color=primary>
                                 <mat-label>Email or phone</mat-label>
-                                <input matInput>
+                                <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" >
+
+                                <mat-error style="margin: -3px -8px;" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                    Please enter a valid email address
+                                    </mat-error>
+                                    <mat-error style="margin: -3px -8px;" *ngIf="emailFormControl.hasError('required')">
+                                    Email is <strong>required</strong>
+                                    </mat-error>
+
                             </mat-form-field>
 
                         </div>

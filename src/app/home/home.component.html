@@ -1,0 +1,47 @@
+<mat-toolbar class="nav">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    (click)="toggleSidebar()">
+    <mat-icon style="margin-top: 1.5px;">menu</mat-icon>
+
+  </button>
+  <img style=" height: 70px; width: 70px;" src="../../assets/image (2).png" alt="none">
+  <span style="position: fixed; left: 140px;">
+    <h1>{{selectedTitle}}</h1>
+  </span>
+
+  <form action="">
+    <div class="search">
+      <img class='search-icon' src='../../assets/image.png' alt="none">
+      <input class="search-bar" type="text" placeholder="Search">
+    </div>
+  </form>
+  <div class="icons-1">
+    <div><img class="refresh" src="../../assets/refresh.png" alt=none></div>
+    <div><img class="refresh" src="../../assets/pause.png" alt=none></div>
+    <div><img class="settings" src="../../assets/settings.png" alt=none></div>
+    <div><img class="dice" src="../../assets/dice.png" alt=none></div>
+  </div>
+  <div class="profile">
+    <img class="digit" src="../../assets/digit.jpg" alt="none">
+    <img class="kohli" src="https://th.bing.com/th/id/OIP.eIRp_U71U4pFqqGzN3WQFQHaGp?rs=1&pid=ImgDetMain" alt="none">
+  </div>
+  <span class="example-spacer"></span>
+
+</mat-toolbar>
+
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <mat-nav-list>
+    <div class="side-button"> <a mat-list-item (click)="selectTitle('Notes')"><span><img src="../../assets/image (1).png" class="icons"
+            alt=""></span><span style="margin-left: 20px;">Notes</span></a></div>
+    <div class="side-button"> <a mat-list-item (click)="selectTitle('Reminder')"><span><img src="../../assets/image (6).png" class="icons"
+            alt=""></span><span style="margin-left: 20px;">Reminder</span></a> </div>
+    <div class="side-button"> <a mat-list-item (click)="selectTitle('Notes')"><span><img src="../../assets/image (1).png" class="icons"
+            alt=""></span><span style="margin-left: 20px;">Notes</span></a></div>
+    <div class="side-button"> <a mat-list-item (click)="selectTitle('Edit Labels')"><span><img src="../../assets/image (5).png" class="icons"
+            alt=""></span><span style="margin-left: 20px;">Edit Labels</span></a></div>
+    <div class="side-button"> <a mat-list-item (click)="selectTitle('Archive')"><span><img src="../../assets/image (4).png" class="icons"
+            alt=""></span><span style="margin-left: 20px;">Archive</span></a></div>
+    <div class="side-button"> <a mat-list-item (click)="selectTitle('Trash')"><span><img src="../../assets/image (3).png" class="icons"
+            alt=""></span><span style="margin-left: 20px;">Trash</span></a></div>
+  </mat-nav-list>
+</div>

@@ -8,7 +8,9 @@ body{
     position:relative;
     overflow-y: hidden;
 }
-
+.push-down{
+    top: 20px;
+}
 #drop{
   background-color: #e0e7f1 !important;
   height: 103px;
@@ -178,6 +180,6 @@ span{
     background-color: #e7e5e5;
 }
 .mid{
-    margin-top: -2px;
+    margin-top: 13px;
     margin-left: 3px;
 }

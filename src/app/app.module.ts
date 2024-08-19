@@ -11,7 +11,7 @@ import { LoginComponent } from './login/login.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgFor} from '@angular/common';
 
 import { MatCard, MatCardModule} from '@angular/material/card';
@@ -21,7 +21,9 @@ import { RegisterComponent } from './register/register.component';
 import { BasicInfoComponent } from './basic-info/basic-info.component';
 import { PasswordComponent } from './password/password.component';
 import { UsernameComponent } from './username/username.component';
-
+import { HomeComponent } from './home/home.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -32,20 +34,24 @@ import { UsernameComponent } from './username/username.component';
     BasicInfoComponent,
     PasswordComponent,
     UsernameComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
+    MatListModule,
     MatInputModule,
     MatIconModule,
     MatButtonModule,
     MatSelectModule,
     FormsModule,
     NgFor,
+    MatToolbarModule,
     MatCardModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ReactiveFormsModule
   
 
 ],

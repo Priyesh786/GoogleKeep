@@ -28,7 +28,13 @@
                         <div>
                             <mat-form-field appearance="outline" color=primary>
                                 <mat-label>First name</mat-label>
-                                <input matInput>
+                                <input matInput [formControl]="FormControl" [errorStateMatcher]="matcher">
+                                <mat-error style="margin: 77px 0px;" *ngIf="FormControl.hasError('required')">
+                                    Enter first name
+                                    </mat-error>
+                                    <mat-error style="margin: 77px 0px;" *ngIf="FormControl.hasError('singleWordName')">
+                                        Enter first name
+                                        </mat-error>
                             </mat-form-field>
 
                         </div>
