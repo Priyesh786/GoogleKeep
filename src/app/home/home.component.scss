@@ -85,9 +85,7 @@
   }
 
 ::ng-deep .mdc-list-item__content:hover{
-    background-color: gold;
-    border-bottom-right-radius: 100px !important;
-    border-top-right-radius: 100px !important;
+    background-color: #feefc3;
   }
 
 ::ng-deep.mdc-list-item__content{    
@@ -109,8 +107,10 @@
 ::ng-deep .mdc-list-item {
     padding-left: 0px !important;
     padding-right: 0px !important;
-    width: 200px !important;
+    width: 250px !important;
     height: 40px !important;
+    border-bottom-right-radius: 40rem !important;
+    border-top-right-radius: 40rem !important;
 }
 .side-button{
     margin:12px 0px 6px 0px;

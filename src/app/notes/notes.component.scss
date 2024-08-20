@@ -1,0 +1,60 @@
+.form{
+    padding-top: 110px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.inp-box {
+    border: none;
+    outline: none;
+    box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.3);
+    width: 360px;
+    height: 40px;
+    border-radius: 0.5rem;
+    padding-right: 180px;
+    margin-left: 450px;
+}
+.card{
+    margin-left: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.but{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    height: 30px;
+}
+h2{
+    padding-left: 15px;
+    margin-top: 10px;
+
+}
+.content{
+    margin-top: 15px;
+    padding-left: 15px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-bottom: 15px;
+ 
+}
+.example-card{
+    border: 1.5px groove;
+
+    border-radius: 0.5rem;
+    margin-top: 40px;
+    width: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    height: auto;
+    padding-bottom: 15px;
+}
+.example-card-footer{
+    margin-bottom: 20px !important;
+}
+mat-card-content{
+    display: flex !important;
+    flex-wrap: wrap;
+    padding: 10px;
+}

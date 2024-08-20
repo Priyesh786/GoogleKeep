@@ -24,6 +24,12 @@ import { UsernameComponent } from './username/username.component';
 import { HomeComponent } from './home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { NotesComponent } from './notes/notes.component';
+import { RemindersComponent } from './reminders/reminders.component';
+import { EditLabelsComponent } from './edit-labels/edit-labels.component';
+import { ArchivesComponent } from './archives/archives.component';
+import { TrashComponent } from './trash/trash.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,6 +41,11 @@ import { MatListModule } from '@angular/material/list';
     PasswordComponent,
     UsernameComponent,
     HomeComponent,
+    NotesComponent,
+    RemindersComponent,
+    EditLabelsComponent,
+    ArchivesComponent,
+    TrashComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +62,8 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatCardModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   
 
 ],

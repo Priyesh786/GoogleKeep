@@ -6,6 +6,13 @@ import { BasicInfoComponent } from './basic-info/basic-info.component';
 import { PasswordComponent } from './password/password.component';
 import { UsernameComponent } from './username/username.component';
 import { HomeComponent } from './home/home.component';
+import { NotesComponent } from './notes/notes.component';
+import { RemindersComponent } from './reminders/reminders.component';
+import { EditLabelsComponent } from './edit-labels/edit-labels.component';
+import { TrashComponent } from './trash/trash.component';
+import { ArchivesComponent } from './archives/archives.component';
+
+
 
 const routes: Routes = [
   {
@@ -30,7 +37,29 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    children:[ 
+    {
+      path: 'notes',
+     component: NotesComponent
+    },
+    {
+      path: 'reminders',
+     component: RemindersComponent
+    },
+    {
+      path: 'edit-labels',
+     component: EditLabelsComponent
+    },
+    {
+      path: 'trash',
+      component: TrashComponent
+    },
+    {
+      path: 'archives',
+      component: ArchivesComponent
+    }
+  ]
   }
 ];
 

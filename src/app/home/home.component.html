@@ -4,7 +4,7 @@
     <mat-icon style="margin-top: 1.5px;">menu</mat-icon>
 
   </button>
-  <img style=" height: 70px; width: 70px;" src="../../assets/image (2).png" alt="none">
+  <img [routerLink]="['/home']" style=" height: 70px; width: 70px; cursor: pointer;" src="../../assets/image (2).png" alt="none">
   <span style="position: fixed; left: 140px;">
     <h1>{{selectedTitle}}</h1>
   </span>
@@ -28,20 +28,23 @@
   <span class="example-spacer"></span>
 
 </mat-toolbar>
-
-<div class="sidebar" [class.open]="isSidebarOpen">
-  <mat-nav-list>
-    <div class="side-button"> <a mat-list-item (click)="selectTitle('Notes')"><span><img src="../../assets/image (1).png" class="icons"
-            alt=""></span><span style="margin-left: 20px;">Notes</span></a></div>
-    <div class="side-button"> <a mat-list-item (click)="selectTitle('Reminder')"><span><img src="../../assets/image (6).png" class="icons"
-            alt=""></span><span style="margin-left: 20px;">Reminder</span></a> </div>
-    <div class="side-button"> <a mat-list-item (click)="selectTitle('Notes')"><span><img src="../../assets/image (1).png" class="icons"
-            alt=""></span><span style="margin-left: 20px;">Notes</span></a></div>
-    <div class="side-button"> <a mat-list-item (click)="selectTitle('Edit Labels')"><span><img src="../../assets/image (5).png" class="icons"
-            alt=""></span><span style="margin-left: 20px;">Edit Labels</span></a></div>
-    <div class="side-button"> <a mat-list-item (click)="selectTitle('Archive')"><span><img src="../../assets/image (4).png" class="icons"
-            alt=""></span><span style="margin-left: 20px;">Archive</span></a></div>
-    <div class="side-button"> <a mat-list-item (click)="selectTitle('Trash')"><span><img src="../../assets/image (3).png" class="icons"
-            alt=""></span><span style="margin-left: 20px;">Trash</span></a></div>
-  </mat-nav-list>
+<div style="display:flex;">
+  <div class="sidebar" [class.open]="isSidebarOpen" style="display:flex">
+    <mat-nav-list>
+      <div class="side-button" [routerLink]="['/home/notes']"> <a mat-list-item  (click)="selectTitle('Notes')" id="myButton"><span><img src="../../assets/image (1).png" class="icons"
+              alt=""></span><span style="margin-left: 20px;">Notes</span></a></div>
+      <div class="side-button" [routerLink]="['/home/reminders']"> <a mat-list-item (click)="selectTitle('Reminders')" ><span><img src="../../assets/image (6).png" class="icons"
+              alt=""></span><span style="margin-left: 20px;">Reminders</span></a> </div>
+      <div class="side-button"> <a mat-list-item (click)="selectTitle('Notes')"><span><img src="../../assets/label_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" class="icons"
+              alt=""></span><span style="margin-left: 20px;">Labels</span></a></div>
+      <div class="side-button" [routerLink]="['/home/edit-labels']"> <a mat-list-item (click)="selectTitle('Edit Labels')"><span><img src="../../assets/image (5).png" class="icons"
+              alt=""></span><span style="margin-left: 20px;">Edit Labels</span></a></div>
+      <div class="side-button" [routerLink]="['/home/archives']"> <a mat-list-item (click)="selectTitle('Archive')"><span><img src="../../assets/image (4).png" class="icons"
+              alt=""></span><span style="margin-left: 20px;">Archive</span></a></div>
+      <div class="side-button" [routerLink]="['/home/trash']"> <a mat-list-item (click)="selectTitle('Trash')"><span><img src="../../assets/image (3).png" class="icons"
+              alt=""></span><span style="margin-left: 20px;">Trash</span></a></div>
+    </mat-nav-list>
+  </div>
+<router-outlet></router-outlet>
 </div>
+

@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
   constructor(){}
   ngOnInit(){}
   selectedTitle = 'Keep';
   isSidebarOpen = false;
   toggleSidebar() {
+    console.log(" rtyuijhbvnm "+this.isSidebarOpen)
     this.isSidebarOpen = !this.isSidebarOpen;
   }
   selectTitle(title: string) {
