@@ -30,6 +30,7 @@ import { EditLabelsComponent } from './edit-labels/edit-labels.component';
 import { ArchivesComponent } from './archives/archives.component';
 import { TrashComponent } from './trash/trash.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ServicePipe } from './pipe/service.pipe';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     EditLabelsComponent,
     ArchivesComponent,
     TrashComponent,
+    ServicePipe,
   ],
   imports: [
     BrowserModule,

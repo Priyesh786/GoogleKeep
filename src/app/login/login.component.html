@@ -1,6 +1,6 @@
 <body>
     <div class="main">
-        <form action="">
+        <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
             <div class="logo">
                 <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true"
                     jsname="jjf7Ff">
@@ -28,35 +28,50 @@
                         <div>
                             <mat-form-field appearance="outline" color=primary>
                                 <mat-label>Email or phone</mat-label>
-                                <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" >
+                                <input matInput formControlName="email">
 
-                                <mat-error style="margin: -3px -8px;" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                                    Please enter a valid email address
-                                    </mat-error>
-                                    <mat-error style="margin: -3px -8px;" *ngIf="emailFormControl.hasError('required')">
+                               
+                                <!-- <mat-error style="margin: -3px -8px;" *ngIf="email.hasError('required')">
                                     Email is <strong>required</strong>
-                                    </mat-error>
+                                </mat-error> -->
 
                             </mat-form-field>
+                            <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
+                            style="color: red; margin-left: 15px; margin-top: -5px;">
+                            Please provide a valid email address.
+                        </div>
+                        </div>
+                        <mat-form-field appearance="outline" color=primary style="margin-top: 19px;">
+                            <mat-label>Password</mat-label>
+                            <input matInput formControlName="password">
 
-                        </div>
-                        <div class="mid">
-                            <button mat-button color=primary class="blue-button">Forgot email?</button>
-                        </div>
+                            
+                            <!-- <mat-error style="margin: -3px -8px;" *ngIf="password.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error> -->
+
+                        </mat-form-field>
+                        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty ||
+                            loginForm.get('password')?.touched)" style="color: red; margin-left: 15px; margin-top: -22px;">Please provide a
+                                valid Password
+                            </div>
+
                     </div>
 
-                    <div>
+                    <div style="margin-top: -55px;">
                         <p class="note">
                             Not your computer? Use Guest mode to sign in privately.
                         </p>
                         <div>
-                            <button mat-button color=primary class="blue-button">Learn more about using Guest mode</button>
+                            <button mat-button color=primary class="blue-button">Learn more about using Guest
+                                mode</button>
                         </div>
                     </div>
                     <div class="button-class">
-                        <button mat-button color=primary class="button" (click)="opendoor($event)" >Create account</button>
-                        
-                        <button mat-raised-button color="primary" class="button button-2">Next</button>
+                        <button mat-button color=primary class="button" (click)="opendoor($event)">Create
+                            account</button>
+
+                        <button mat-raised-button color="primary" class="button button-2" type="submit">Next</button>
 
                     </div>
                 </div>
@@ -68,24 +83,24 @@
     <div class="main-2">
         <div>
             <mat-select placeholder="English (United States)" disableRipple class="ee">
-              <mat-option value="1" style="font-size: small;">English (United States)</mat-option>
-              <mat-option value="2" style="font-size: small;">French</mat-option>
-              <mat-option value="3" style="font-size: small;">Portuguese</mat-option>
-              <mat-option value="4" style="font-size: small;">German</mat-option>
+                <mat-option value="1" style="font-size: small;">English (United States)</mat-option>
+                <mat-option value="2" style="font-size: small;">French</mat-option>
+                <mat-option value="3" style="font-size: small;">Portuguese</mat-option>
+                <mat-option value="4" style="font-size: small;">German</mat-option>
 
             </mat-select>
-    </div>
+        </div>
         <div>
             <button class="footer-button">Help</button>
             <button class="footer-button">Privacy</button>
             <button class="footer-button">Terms</button>
         </div>
     </div>
-<mat-card id="drop">
-    <div>
-    <p [routerLink]="['./register']" class="drop-down">For my personal use</p> 
-    <p [routerLink]="['./register']" class="drop-down">For my child</p>
-    <p [routerLink]="['./register']" class="drop-down">For work or my business</p>
-</div>
-</mat-card>
+    <mat-card id="drop">
+        <div>
+            <p [routerLink]="['./register']" class="drop-down">For my personal use</p>
+            <p [routerLink]="['./register']" class="drop-down">For my child</p>
+            <p [routerLink]="['./register']" class="drop-down">For work or my business</p>
+        </div>
+    </mat-card>
 </body>

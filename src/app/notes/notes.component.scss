@@ -11,13 +11,14 @@
     height: 40px;
     border-radius: 0.5rem;
     padding-right: 180px;
-    margin-left: 450px;
+    margin-left: 410px;
 }
 .card{
-    margin-left: 300px;
+    margin-left: 280px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-top: 30px;   
 }
 .but{
     margin-left: 20px;
@@ -42,13 +43,14 @@ h2{
 }
 .example-card{
     border: 1.5px groove;
-
     border-radius: 0.5rem;
     margin-top: 40px;
     width: 250px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    height: auto;
+    height:max-content;
     padding-bottom: 15px;
+    overflow-y: auto;
+    overflow-x: auto;
 }
 .example-card-footer{
     margin-bottom: 20px !important;

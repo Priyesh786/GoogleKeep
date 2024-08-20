@@ -95,9 +95,10 @@ mat-button{
 }
 .button-class{
     display: flex;
+    margin-top: -10px;
     flex-direction: row;
     justify-content: end;
-    gap:20px;
+    gap:15px;
     padding-right: 15px;
 }
 .button{

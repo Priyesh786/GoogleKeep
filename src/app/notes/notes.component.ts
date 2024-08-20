@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-notes',
@@ -9,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class NotesComponent {
   notesList: any[]=[];
-  constructor(private httpService: HttpService, private router: Router){}
+  constructor(private httpService: HttpService){}
+  showCreateNote = false;
   ngOnInit():void {
     this.httpService.getAll().subscribe({
       next:(res:any)=>{
