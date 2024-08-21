@@ -1,4 +1,7 @@
+import { HttpBackend } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { HttpService } from '../services/http.service';
+
 
 @Component({
   selector: 'app-trash',
@@ -6,5 +9,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./trash.component.scss']
 })
 export class TrashComponent {
-
+  trashList: any[]=[];
+  constructor(private httpService: HttpService){}
+  showCreateNote = false;
+  ngOnInit():void {
+    this.httpService.getAll().subscribe({
+      next:(res:any)=>{
+        this.trashList = res.data.data;
+        console.log(res.data.data)
+      },
+      error:(e)=>{
+        console.log("err",e)
+      }
+    })
+  }
 }

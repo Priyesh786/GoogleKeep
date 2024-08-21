@@ -1,1 +1,20 @@
-<p>archives works!</p>
+
+<div class="form">
+    <div class="card" *ngFor="let archive of archivesList">
+      <div class="example-card" appearance="outlined" *ngIf = "archive.isArchived && !archive.isDeleted ">
+        <mat-card-header>
+          <mat-card-title>
+            <h2>{{archive.title}}</h2>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="content">
+          <p>{{archive.description}}</p>
+        </mat-card-content>
+        <mat-card-footer class="example-card-footer">
+          <button class="but">Edit</button>
+          <button class="but">Delete</button>
+          <button class="but">Hide</button>
+        </mat-card-footer>
+      </div>
+    </div>
+  </div>
