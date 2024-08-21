@@ -1,5 +1,20 @@
 <div class="form">
-  <input type="text" class="inp-box" placeholder="Take a note...">
+  <input id="inp-1" type="text" class="inp-box" placeholder="Take a note..." (click)="openInpBox()">
+ <div id="inp-2" class="inp-box-1"> 
+  <div> <input style="border-radius: 0.5rem; margin-top: 0.5px; height: 25px; width: 520px; border: none; outline: none; padding: 10px;" type="text" placeholder="Title" [(ngModel)]="noteTitle" (keyup)="uploadData($event)" ></div>
+  <div> <input style="padding-left: 10px; height: 35px; width: 520px; border: none; outline: none" type="text" placeholder="Take a note" [(ngModel)]="noteDescription" (keyup)="uploadData($event)"></div>
+  <div style="display: flex; margin-top: 14px; margin-left: 10px;">
+    <div><img class="ic" src="../../assets/add_alert_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="none"></div>
+    <div><img class="ic" src="../../assets/person_add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="none"></div>
+    <div><img class="ic" src="../../assets/palette_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="none"></div>
+    <div><img class="ic" src="../../assets/image_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="none"></div>
+    <div><img class="ic" src="../../assets/archive_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="none"></div>
+    <div><img class="ic" src="../../assets/more_vert_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="none"></div>
+    <div><img class="ic1" src="../../assets/undo_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="none"></div>
+    <div><img class="ic1" src="../../assets/redo_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="none"></div>
+    <div (click)="openInpBox()" style="margin-left: 174px; cursor: pointer;">Close</div>
+  </div>
+ </div>
   <div class="card">
     <div class="example-card" appearance="outlined" *ngFor="let note of notesList">
       <mat-card-header>

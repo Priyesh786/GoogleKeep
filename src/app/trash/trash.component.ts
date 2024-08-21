@@ -15,7 +15,9 @@ export class TrashComponent {
   ngOnInit():void {
     this.httpService.getAll().subscribe({
       next:(res:any)=>{
-        this.trashList = res.data.data;
+        this.trashList = res.data.data.filter((trash: any) => {
+          return trash.isDeleted;
+        });
         console.log(res.data.data)
       },
       error:(e)=>{

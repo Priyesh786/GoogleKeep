@@ -6,31 +6,6 @@ import { OnInit } from '@angular/core';
   selector: 'app-basic-info',
   templateUrl: './basic-info.component.html',
   styleUrls: ['./basic-info.component.scss'],
-  template: `
-  <div class="dob">
-      <div class="month">
-        <mat-form-field appearance="outline" color="primary">
-          <mat-select placeholder="Month" formControlName="month">
-{{month.name}}</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div class="month">
-        <mat-form-field appearance="outline" color="primary">
-          <mat-label>Day</mat-label>
-          <input matInput formControlName="day">
-          <mat-error *ngIf="registerForm.get('day')?.hasError('required')">Day is required</mat-error>
-          <mat-error *ngIf="registerForm.get('day')?.hasError('invalidDay')">Invalid Day</mat-error>
-        </mat-form-field>
-      </div>
-      <div class="month">
-        <mat-form-field appearance="outline" color="primary">
-          <mat-label>Year</mat-label>
-          <input matInput formControlName="year">
-        </mat-form-field>
-      </div>
-    </div>
-  `
 })
 export class BasicInfoComponent {
   // registerForm!: FormGroup;

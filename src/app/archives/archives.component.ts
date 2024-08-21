@@ -12,9 +12,10 @@ export class ArchivesComponent {
   showCreateNote = false;
   ngOnInit():void {
     this.httpService.getAll().subscribe({
-      next:(res:any)=>{
-        this.archivesList = res.data.data;
-        console.log(res.data.data)
+      next: (res: any) => {
+        this.archivesList = res.data.data.filter((archive: any) => {
+          return archive.isArchived && !archive.isDeleted;
+        });
       },
       error:(e)=>{
         console.log("err",e)

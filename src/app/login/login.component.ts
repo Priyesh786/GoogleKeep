@@ -24,6 +24,7 @@ export class LoginComponent {
   loginForm!:FormGroup;
   email: string = '';
   password: string = '';
+  loginError: string | null = null; 
 
   constructor(private httpService: HttpService, private formBuilder: FormBuilder, private route: Router){
     this.loginForm = this.formBuilder.group({
@@ -45,6 +46,7 @@ export class LoginComponent {
         localStorage.setItem("access_token", id);
         this.route.navigate(['/home/notes']);
       },(err:any)=> {
+        this.loginError = 'Invalid email or password. Please try again.';
         console.log("err", err);
       }
     )

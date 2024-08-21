@@ -11,7 +11,25 @@
     height: 40px;
     border-radius: 0.5rem;
     padding-right: 180px;
+    padding-left: 5px;
     margin-left: 410px;
+    display: block;
+}
+.ic{
+    height: 25px;
+    margin-right: 13px;
+}
+.ic1{
+    @extend .ic;
+    opacity: 0.6;
+}
+.inp-box-1 {
+    @extend .inp-box;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+   // margin-top: -42px;
+    display: none;
 }
 .card{
     margin-left: 280px;
