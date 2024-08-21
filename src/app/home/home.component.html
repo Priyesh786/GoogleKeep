@@ -4,7 +4,7 @@
     <mat-icon style="margin-top: 1.5px;">menu</mat-icon>
 
   </button>
-  <img [routerLink]="['/home']" (click)="selectTitle('Keep')" style=" height: 70px; width: 70px; cursor: pointer;" src="../../assets/image (2).png" alt="none">
+  <img [routerLink]="['/home/notes']" (click)="selectTitle('Keep')" style=" height: 70px; width: 70px; cursor: pointer;" src="../../assets/image (2).png" alt="none">
   <span style="position: fixed; left: 140px;">
     <h1>{{selectedTitle}}</h1>
   </span>
@@ -21,7 +21,7 @@
     <div><img class="settings" src="../../assets/settings.png" alt=none></div>
     <div><img class="dice" src="../../assets/dice.png" alt=none></div>
   </div>
-  <div class="profile">
+  <div class="profile" (click)="logout()">
     <img class="digit" src="../../assets/digit.jpg" alt="none">
     <img class="kohli" src="https://th.bing.com/th/id/OIP.eIRp_U71U4pFqqGzN3WQFQHaGp?rs=1&pid=ImgDetMain" alt="none">
   </div>
